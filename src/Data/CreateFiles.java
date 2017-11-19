@@ -27,7 +27,7 @@ public static void Create()
 	
 	for (int i=0;i<700000;i++)
 	{
-		String ss = i+" ";
+		String ss = i+",";
 		for ( int j = 0; j < 33; j ++)
 			ss += (int)(Math.random()*1000) + ",";
 		ss = ss.substring(0, ss.length()-1)+"\r\n";

@@ -4,3 +4,4 @@ src/.DS_Store
 .idea/
 Chameleon.iml
 out/
+target/
