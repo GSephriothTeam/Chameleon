@@ -1,9 +1,6 @@
 .DS_Store
 bin/
 src/.DS_Store
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea/
 Chameleon.iml
 out/
