@@ -29,8 +29,8 @@ public static void Create()
 	
 	for (int i=0;i<700000;i++)
 	{
-		//int i1=(int)(Math.random()*1000);       //  生成0-10000的随机数
-		//int i2=(int)(Math.random()*1000);       //  生成0-10000的随机数
+		//int i1=(int)(Math.random()*1000);       //  鐢熸垚0-10000鐨勯殢鏈烘暟
+		//int i2=(int)(Math.random()*1000);       //  鐢熸垚0-10000鐨勯殢鏈烘暟
 		String ss = i+" ";
 		for ( int j = 0; j < 33; j ++)
 			ss += (int)(Math.random()*1000) + " ";
