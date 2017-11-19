@@ -1,5 +1,9 @@
 .DS_Store
-bin/.DS_Store
-bin/Chameleon
-bin/Data/
+bin/
 src/.DS_Store
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+Chameleon.iml
+out/
