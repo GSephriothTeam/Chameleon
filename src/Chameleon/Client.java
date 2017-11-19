@@ -9,7 +9,7 @@ package Chameleon;
  */
 public class Client {
 	public static void main(String[] args){
-		String filePath = "Data.csv";
+		String filePath = "Data/Data10_1000.csv";
 		//k-近邻的k设置
 		int k = 1;
 		//度量函数阈值

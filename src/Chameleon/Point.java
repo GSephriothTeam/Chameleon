@@ -22,7 +22,7 @@ public class Point{
 		//this.id = Integer.parseInt(id);
 		//this.x = Integer.parseInt(x);
 		//this.y = Integer.parseInt(y);
-		String []ss = s.split(" ");
+		String []ss = s.split(",");
 		this.id = Integer.parseInt(ss[0]);
 		List<Integer> l = new ArrayList<Integer>();
 		for ( int i = 1; i < ss.length; i ++)
