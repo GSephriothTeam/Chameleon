@@ -1,0 +1,47 @@
+Package: MixSim
+Version: 1.1-3
+Date: 2017-04-22
+Title: Simulating Data to Study Performance of Clustering Algorithms
+Authors@R: c(person("Volodymyr", "Melnykov", role = "aut",
+                    email = "vmelnykov@cba.ua.edu"),
+             person("Wei-Chen", "Chen", role = c("aut", "cre"),
+                    email = "wccsnow@gmail.com"),
+             person("Ranjan", "Maitra", role = "aut",
+                    email = "maitra@iastate.edu"),
+             person("Robert", "Davies", role = "ctb",
+                    comment = "quadratic form probabilities"),
+             person("Stephen", "Moshier", role = "ctb",
+                    comment = "eigenvalue calculations"),
+             person("Rouben", "Rostamian", role = "ctb",
+                     comment = "memory allocation"))
+Depends: R (>= 3.0.0), MASS
+Enhances: mclust, cluster
+LazyLoad: yes
+LazyData: yes
+Description: The utility of this package is in simulating mixtures of Gaussian
+        distributions with different levels of overlap between mixture
+        components.  Pairwise overlap, defined as a sum of two
+        misclassification probabilities, measures the degree of
+        interaction between components and can be readily employed to
+        control the clustering complexity of datasets simulated from
+        mixtures. These datasets can then be used for systematic
+        performance investigation of clustering and finite mixture
+        modeling algorithms. Among other capabilities of 'MixSim', there
+        are computing the exact overlap for Gaussian mixtures,
+        simulating Gaussian and non-Gaussian data, simulating outliers
+        and noise variables, calculating various measures of agreement
+        between two partitionings, and constructing parallel
+        distribution plots for the graphical display of finite mixture
+        models.
+License: GPL (>= 2)
+NeedsCompilation: yes
+Packaged: 2017-04-22 19:48:36 UTC; snoweye
+Author: Volodymyr Melnykov [aut],
+  Wei-Chen Chen [aut, cre],
+  Ranjan Maitra [aut],
+  Robert Davies [ctb] (quadratic form probabilities),
+  Stephen Moshier [ctb] (eigenvalue calculations),
+  Rouben Rostamian [ctb] (memory allocation)
+Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
+Repository: CRAN
+Date/Publication: 2017-04-29 17:05:22 UTC
