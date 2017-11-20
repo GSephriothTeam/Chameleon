@@ -7,8 +7,6 @@
     <version>0.1</version>
     <packaging>jar</packaging>
 
-
-
     <dependencies>
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -31,24 +29,37 @@
         <outputDirectory>bin</outputDirectory>
         <!--当项目没有规定目标（Maven2 叫做阶段）时的默认值-->
         <defaultGoal>compile</defaultGoal>
-        <!--&lt;!&ndash;这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。&ndash;&gt;-->
-        <!--<resources>-->
-            <!--&lt;!&ndash;这个元素描述了项目相关或测试相关的所有资源路径&ndash;&gt;-->
-            <!--<resource>-->
-                <!--&lt;!&ndash; 描述了资源的目标路径。该路径相对target/classes目录（例如${project.build.outputDirectory}）。举个例 子，如果你想资源在特定的包里(org.apache.maven.messages)，你就必须该元素设置为org/apache/maven /messages。然而，如果你只是想把资源放到源码目录结构里，就不需要该配置。&ndash;&gt;-->
-                <!--<targetPath/>-->
-                <!--&lt;!&ndash;是否使用参数值代替参数名。参数值取自properties元素或者文件里配置的属性，文件在filters元素里列出。&ndash;&gt;-->
-                <!--<filtering/>-->
-                <!--&lt;!&ndash;描述存放资源的目录，该路径相对POM路径&ndash;&gt;-->
-                <!--<directory/>-->
-                <!--&lt;!&ndash;包含的模式列表，例如**/*.xml.&ndash;&gt;-->
-                <!--<includes/>-->
-                <!--&lt;!&ndash;排除的模式列表，例如**/*.xml&ndash;&gt;-->
-                <!--<excludes/>-->
-            <!--</resource>-->
-        <!--</resources>-->
+
         <!--构建产生的所有文件存放的目录-->
         <directory>bin</directory>
+        <plugins>
+            <!--(start) for package jar with dependencies -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!--<mainClass>Spark.WordCount</mainClass>-->
+                            <mainClass>Chameleon.Client</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--(end) for package jar with dependencies -->
+        </plugins>
     </build>
 
 </project>
