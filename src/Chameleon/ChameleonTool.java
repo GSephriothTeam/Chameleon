@@ -46,7 +46,6 @@ public class ChameleonTool {
 	//time
 	Date date;
 	long starttime;
-	long endtime;
 
 	public ChameleonTool(String filePath, int k, double minMetric) {
 		this.filePath = filePath;
@@ -451,7 +450,7 @@ public class ChameleonTool {
 	    //System.out.println(date.toString());
 		String order=("res.txt");
 	    file = new File(order);
-	    //long nowtime;
+	    long nowtime;
 	    try {
 			writer = new BufferedWriter(new FileWriter(file));
 			fw = new FileWriter(file,true);
@@ -459,31 +458,25 @@ public class ChameleonTool {
 			//long regendTime = System.currentTimeMillis();
 			//fw.write(cc++ +" ->> "+(regendTime-regStartTime)+"\r\n");
 			starttime = new Date().getTime();
-			//fw.write(" ->> "+starttime+"\r\n");
+			fw.write(" ->> "+starttime+"\r\n");
 			//fw.write(date.toString()+"\r\n");
 		
 			// 第一阶段形成小聚簇
-			starttime = System.currentTimeMillis();
 			connectedGraph();
 			searchSmallCluster();
-			endtime = System.currentTimeMillis();
 			System.out.println("第一阶段形成的小簇集合：");
-			System.out.println("First Step run: " + (endtime - starttime) + " ms");
 			printClusters(initClusters);
 			
 			nowtime = new Date().getTime();
-			fw.write("\r\n\n\n\n\n"+(endtime - starttime)+":\r\n\n\n\n");
+			fw.write("\r\n\n\n\n\n"+(nowtime - starttime)+":\r\n\n\n\n");
 			
 			// 第二阶段根据RI和RC的值合并小聚簇形成最终结果聚簇
-			starttime = System.currentTimeMillis();
 			combineSubClusters();
-			endtime = System.currentTimeMillis();
 			System.out.println("最终的聚簇集合：");
-			System.out.println("Second Step run: " + (endtime - starttime) + " ms");
 			printClusters(resultClusters);
 
 			nowtime = new Date().getTime();
-			fw.write("\r\n\n\n\n\n"+(endtime - starttime)+":\r\n\n\n\n");
+			fw.write("\r\n\n\n\n\n"+(nowtime - starttime)+":\r\n\n\n\n");
 		
 			fw.close();
 			writer.close();
