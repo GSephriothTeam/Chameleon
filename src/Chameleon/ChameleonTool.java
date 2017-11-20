@@ -471,7 +471,7 @@ public class ChameleonTool {
 			System.out.println("First Step Time: " + (endtime - starttime) + " ms");
 			printClusters(initClusters);
 			
-			nowtime = new Date().getTime();
+			//nowtime = new Date().getTime();
 			fw.write("\r\n\n\n\n\n"+(endtime - starttime)+":\r\n\n\n\n");
 			
 			// 第二阶段根据RI和RC的值合并小聚簇形成最终结果聚簇
@@ -482,7 +482,7 @@ public class ChameleonTool {
 			System.out.println("Second Step Time: " + (endtime - starttime) + " ms");
 			printClusters(resultClusters);
 
-			nowtime = new Date().getTime();
+			//nowtime = new Date().getTime();
 			fw.write("\r\n\n\n\n\n"+(endtime - starttime)+":\r\n\n\n\n");
 		
 			fw.close();
