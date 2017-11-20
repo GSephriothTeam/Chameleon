@@ -1,7 +1,7 @@
 .DS_Store
 bin/
 src/.DS_Store
-.idea/
+.idea/*
 Chameleon.iml
 out/
 target/
