@@ -2,10 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Spark.WordCount</groupId>
+    <groupId>CS550_Chameleon</groupId>
     <artifactId>WordCount</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
+
+
 
     <dependencies>
         <dependency>
@@ -21,4 +23,32 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <!--该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。-->
+        <sourceDirectory>src</sourceDirectory>
+        <!--被编译过的应用程序class文件存放的目录。-->
+        <outputDirectory>bin</outputDirectory>
+        <!--当项目没有规定目标（Maven2 叫做阶段）时的默认值-->
+        <defaultGoal>compile</defaultGoal>
+        <!--&lt;!&ndash;这个元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。&ndash;&gt;-->
+        <!--<resources>-->
+            <!--&lt;!&ndash;这个元素描述了项目相关或测试相关的所有资源路径&ndash;&gt;-->
+            <!--<resource>-->
+                <!--&lt;!&ndash; 描述了资源的目标路径。该路径相对target/classes目录（例如${project.build.outputDirectory}）。举个例 子，如果你想资源在特定的包里(org.apache.maven.messages)，你就必须该元素设置为org/apache/maven /messages。然而，如果你只是想把资源放到源码目录结构里，就不需要该配置。&ndash;&gt;-->
+                <!--<targetPath/>-->
+                <!--&lt;!&ndash;是否使用参数值代替参数名。参数值取自properties元素或者文件里配置的属性，文件在filters元素里列出。&ndash;&gt;-->
+                <!--<filtering/>-->
+                <!--&lt;!&ndash;描述存放资源的目录，该路径相对POM路径&ndash;&gt;-->
+                <!--<directory/>-->
+                <!--&lt;!&ndash;包含的模式列表，例如**/*.xml.&ndash;&gt;-->
+                <!--<includes/>-->
+                <!--&lt;!&ndash;排除的模式列表，例如**/*.xml&ndash;&gt;-->
+                <!--<excludes/>-->
+            <!--</resource>-->
+        <!--</resources>-->
+        <!--构建产生的所有文件存放的目录-->
+        <directory>bin</directory>
+    </build>
+
 </project>
