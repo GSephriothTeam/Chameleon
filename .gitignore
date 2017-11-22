@@ -1,8 +1,9 @@
 .DS_Store
 bin/
 src/.DS_Store
-.idea/*
+.idea
 Chameleon.iml
+.settings
 out/
 target/
 References/.DS_Store
