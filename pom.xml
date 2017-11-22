@@ -55,8 +55,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <!--<mainClass>Spark.WordCount</mainClass>-->
-                            <mainClass>Chameleon.Client</mainClass>
+                            <mainClass>Spark.WordCount</mainClass>
+                            <!--<mainClass>Chameleon.Client</mainClass>-->
                         </manifest>
                     </archive>
                     <descriptorRefs>

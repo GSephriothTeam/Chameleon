@@ -14,8 +14,9 @@ import org.apache.spark.api.java.function.Function;
 
 public class WordCount {
     public static void main(String[] args) {
-        String logFile = "Data/Data10_1000.csv"; // Should be some file on your system
-        SparkConf conf = new SparkConf().setAppName("CountData");
+
+        String logFile = "/Data/Data10_1000.csv"; // Should be some file on your system
+        SparkConf conf = new SparkConf().setAppName("CountData").setMaster("local");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> logData = sc.textFile(logFile).cache();
 

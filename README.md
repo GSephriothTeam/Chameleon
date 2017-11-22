@@ -23,3 +23,7 @@ CS550 &amp; CS554 course project
 "src/Data" 为测试数据生成代码
 "bin/Data1.txt"和"src/graphData.txt" 用于测试程序能否正常运行
 "bin/Data*.txt" 用于测试程序的性能
+
+####修改编译时的主函数:
+58行 <mainClass>Spark.WordCount</mainClass> 指定主函数为 WordCount
+59行 <mainClass>Chameleon.Client</mainClass> 指定主函数为 Client
